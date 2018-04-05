@@ -1,0 +1,8 @@
+{
+  "name": "facelite",
+  "instancable": true,
+  "creator": false,
+  "userInfo": false,
+  "inline": false,
+  "shareDB": false
+}
