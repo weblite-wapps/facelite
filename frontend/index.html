@@ -3,36 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://cdn.jsdelivr.net/npm/ramda@0.25/dist/ramda.min.js"></script>
+    <!-- <script src="https://weblite.me:3000/code/wappLibs/core" charset="utf-8"></script> -->
+    <script src="http://localhost:3000/code/wappLibs/core" charset="utf-8"></script>
     <script src="https://simplewebrtc.com/latest-v2.js"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      #remoteVideos video {
-          width: 350px;
-      }
-      #localVideo {
-          height: 150px
-      }
-    </style>
   </head>
   <body>
     <div id="remoteVideos"></div>
     <video id="localVideo"></video>
   </body>
   <script>
-    const webrtc = new SimpleWebRTC({
-      url: 'http://localhost:8888',
-      localVideoEl: 'localVideo',
-      remoteVideosEl: 'remoteVideos',
-      autoRequestMedia: true
-    })
+    window.onload = function() {
+      const webrtc = new SimpleWebRTC({
+        url: 'http://localhost:8888',
+        localVideoEl: 'localVideo',
+        remoteVideosEl: 'remoteVideos',
+        autoRequestMedia: true
+      })
 
-    console.log('v')
-    webrtc.on('readyToCall', function () {
-      console.log('s')
-      webrtc.joinRoom('W.wisId')
-    })
+      webrtc.on('readyToCall', function () {
+        webrtc.joinRoom(W.wisId)
+        W.start()
+      })
+    }
   </script>
 </html>
