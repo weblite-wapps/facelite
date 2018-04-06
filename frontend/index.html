@@ -12,6 +12,7 @@
   <body>
     <div id="remoteVideos"></div>
     <video id="localVideo"></video>
+    <div id="control"></div>
   </body>
   <script>
     window.onload = function() {
@@ -23,7 +24,7 @@
       })
 
       webrtc.on('readyToCall', function () {
-        webrtc.joinRoom(W.wisId)
+        webrtc.joinRoom(W.wisId || 's')
         W.start()
       })
     }
