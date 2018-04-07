@@ -19,11 +19,14 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-html {
-  background: #37474F;
-  width: 100%;
+html, body {
+	width: 100%;
   height: 100%;
-  overflow: hidden;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	background-color: #37474F;
+	overflow: hidden;
 }
 
 body {
@@ -32,6 +35,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/MaterialIcons-Regular.eot);
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../assets/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../assets/fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(../assets/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+#header {
+	width: 100%;
+	height: 50px;
+	background: #F44336;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	padding-left: 30px;
 }
 
 #remoteVideos {
@@ -50,12 +76,4 @@ body {
   width: 150px;
   margin-top: 20px;
   background: #546E7A;
-}
-
-#control {
-	width: 100%;
-	height: 50px;
-	background: #F44336;
-	position: absolute;
-	bottom: 0;
 }
