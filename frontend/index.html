@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="http://cdn.jsdelivr.net/npm/ramda@0.25/dist/ramda.min.js"></script>
-    <!-- <script src="https://weblite.me:3000/code/wappLibs/core" charset="utf-8"></script> -->
-    <script src="http://localhost:3000/code/wappLibs/core" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ramda@0.25/dist/ramda.min.js"></script>
+    <script src="https://weblite.me:3000/code/wappLibs/core" charset="utf-8"></script>
     <script src="https://simplewebrtc.com/latest-v2.js"></script>
   </head>
   <body>
@@ -20,7 +19,6 @@
   <script>
     window.onload = function() {
       const webrtc = new SimpleWebRTC({
-        url: 'http://localhost:8888',
         localVideoEl: 'localVideo',
         remoteVideosEl: 'remoteVideos',
         autoRequestMedia: true
